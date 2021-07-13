@@ -1,4 +1,4 @@
-# tos_motores101
+# Talleres Open Source: "Robótica desde cero"
 
 Actividad [virtual] introductoria sobre motores DC, servos y steppers.
 
