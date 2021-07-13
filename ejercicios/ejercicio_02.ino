@@ -12,6 +12,7 @@ int potPin = 0;    // Equivalente a "A0"
 int servoPin = 9;  // Pin (tipo PWM) donde conectamos el servo.
 int sensorValue;   // Para guardar la señal del potenciómetro.
 int valorAngulo;   // Para guardar el ángulo.
+int anguloMaximo = 180;  // Angulo maximo de nuestro servo.
 
 // La librería servo provee una forma abstracta (simple) de controlar
 // el servo con código. La siguiente línea "define" una variable llamada "mi_servo"
@@ -51,7 +52,7 @@ void loop(){
 
   // Convertir la señal del potenciometro (de 0 a 1023)
   // al rango de ángulos que puede girar el servo (0 1 180).
-  valorAngulo = map(sensorValue, 0, 1023, 0, 179);
+  valorAngulo = map(sensorValue, 0, 1023, 0, anguloMaximo-1);
 
   // Enviar señal para posicionar al servo
   // en el ángulo deseado, usando mi_servo.write()
