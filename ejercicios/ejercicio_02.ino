@@ -14,9 +14,9 @@ int sensorValue;   // Para guardar la señal del potenciómetro.
 int valorAngulo;   // Para guardar el ángulo.
 
 // La librería servo provee una forma abstracta (simple) de controlar
-// el servo. La siguiente línea "define" una variable que
-// representa al microservo dentro del programa, y nos
-// permite controlarlo más fácilmente.
+// el servo con código. La siguiente línea "define" una variable llamada "mi_servo"
+// que representa al motor dentro del programa de forma abstracta, y nos
+// permite controlarlo más sencillamente:
 Servo mi_servo;
 
 
@@ -24,9 +24,13 @@ Servo mi_servo;
 /* CONFIGURAR EL ARDUINO */
 
 void setup (){
-  pinMode(potPin, INPUT);  // Configuramos el pin conectado al potenciómetro como "input".
+  // Configuramos el pin conectado al potenciómetro como "input".
+  // Ver más en: https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/
+  pinMode(potPin, INPUT);
 
-  mi_servo.attach(servoPin);  // Acá especificamos en qué pin está conectado el servo.
+  // Acá especificamos en qué pin está conectado el servo.
+  // Documentación: https://www.arduino.cc/reference/en/libraries/servo/attach/
+  mi_servo.attach(servoPin);
 
   // Configurar mensajes que el arduino nos enviará
   // a traves del "serial monitor":

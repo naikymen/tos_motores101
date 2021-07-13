@@ -18,6 +18,7 @@ int outputValue;
 void setup()
 {
   // Configuramos el pin conectado al potenciómetro como "input".
+  // Ver más en: https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/
   pinMode(potPin, INPUT);
 
   // Configuramos el pin conectado al potenciómetro como "output".
@@ -39,14 +40,17 @@ void loop()
 {
   // Leer la señal del potenciómetro.
   // Este valor es un número entero entre 0 y 1023.
+  // Ver más en: https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/
   sensorValue = analogRead(potPin);
 
   // Convertir la señal del potenciometro (de 0 a 1023)
   // al rango de pulsos PWM que generar el Arduino (de 0 a 255).
+  // Ver más en: https://www.arduino.cc/reference/en/language/functions/math/map/
   outputValue = map(sensorValue, 0, 1023, 0, 255);
 
   // Configurar el PWM en el pin del motor
   // con el nuevo ancho de pulso.
+  // Ver más en: https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/
   analogWrite(motorPin, outputValue);
 
   // Mandar mensajes al serial monitor, con informaicón sobre
