@@ -20,8 +20,9 @@ Servo mi_servo;
 /* CONFIGURAR EL ARDUINO */
 
 void setup (){
-  pinMode(potPin, INPUT);
-  mi_servo.attach(servoPin); //conecta o objeto servo1 ao pino 9
+  pinMode(potPin, INPUT);  // Configuramos el pin conectado al potenciómetro como "input".
+
+  mi_servo.attach(servoPin);  // Acá especificamos en qué pin está conectado el servo.
 
   // Configurar mensajes que el arduino nos enviará
   // a traves del "serial monitor":
