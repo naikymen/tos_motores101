@@ -11,6 +11,8 @@ int motorPin = 9;
 int sensorValue;
 int outputValue;
 
+
+
 /* CONFIGURAR ARDUINO */
 
 void setup()
@@ -28,6 +30,8 @@ void setup()
   // Enviar un mensaje de prueba al serial monitor:
   Serial.println("Señal de entrada (potenciometro), Señal de salida (angulo)");
 }
+
+
 
 /* PROGRAMAR EL CONTROL */
 

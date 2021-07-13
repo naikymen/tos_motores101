@@ -1,6 +1,10 @@
 /* CARGAR UNA LIBRERIA "Servo.h" PARA USAR EL SERVO */
 
+// Leer más al respecto en:
+// https://www.arduino.cc/reference/en/libraries/servo/
 #include <Servo.h>
+
+
 
 /* DEFINIR VARIABLES DEL PROGRAMA */
 
